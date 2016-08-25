@@ -4,10 +4,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace TeamMakerEngine.Test
 {
 	[TestClass]
-	public class UnitTest1
+	public class CsvParserTest
 	{
 		[TestMethod]
-		public void TestMethod1()
+		public void ParseTest()
 		{
 		}
 	}
