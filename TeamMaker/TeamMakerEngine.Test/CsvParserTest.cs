@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TeamMakerEngine.Test
@@ -9,6 +10,11 @@ namespace TeamMakerEngine.Test
 		[TestMethod]
 		public void ParseTest()
 		{
+			//var a = new CsvParser();
+			//var col = a.Parse("FileNameFromFer");
+
+			//CollectionAssert.AllItemsAreNotNull(col);
+			//Assert.IsTrue(col.Any(), "No items found");
 		}
 	}
 }
