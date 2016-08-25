@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamMakerHost", "TeamMakerHost\TeamMakerHost.csproj", "{24E97CDB-3CD8-47B4-B8D3-D3DE8C08DD79}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamMakerEngine", "TeamMakerEngine\TeamMakerEngine.csproj", "{2E364DD2-07C8-4E63-81BF-727124BC1306}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamMakerEngine.Test", "TeamMakerEngine.Test\TeamMakerEngine.Test.csproj", "{E3EAF9DB-DCC3-4AC3-A2D7-504B58D9CF79}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SampleDataCleanser", "SampleDataCleanser\SampleDataCleanser.fsproj", "{A203BBE4-C715-47B9-99BC-A196D0E1E91D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{E3EAF9DB-DCC3-4AC3-A2D7-504B58D9CF79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3EAF9DB-DCC3-4AC3-A2D7-504B58D9CF79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3EAF9DB-DCC3-4AC3-A2D7-504B58D9CF79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A203BBE4-C715-47B9-99BC-A196D0E1E91D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A203BBE4-C715-47B9-99BC-A196D0E1E91D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A203BBE4-C715-47B9-99BC-A196D0E1E91D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A203BBE4-C715-47B9-99BC-A196D0E1E91D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
