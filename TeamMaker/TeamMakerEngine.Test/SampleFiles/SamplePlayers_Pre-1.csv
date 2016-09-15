@@ -1,4 +1,3 @@
-0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16
 First Name,Last Name,Address,City,Zip,State,DOB,Age Group,All Star,School Name,Grade,Medical,Special Requests / Additional info?(A),Buddy/Friend Request(L),Buddy Request- One Request Only(C),Head Coach Request(C),Volunteers Needed(C)
 First1,Last1,Address115,Carlsbad,92018,CA,1/8/2011,2011,No,School4,Pre,,,,,,
 First2,Last2,Address61,Oceanside,92054,CA,7/30/2010,2010,No,School29,K,,,,First120 Last120,,
@@ -70,7 +69,7 @@ First67,Last67,Address102,Carlsbad,92008,CA,9/17/2011,2011,No,School32,TK,,,,Fir
 First68,Last68,Address14,Carlsbad,92010,CA,10/11/2010,2010,No,School75,K,,,,,,
 First69,Last69,Address47,Oceanside,92057,CA,3/19/2011,2011,No,School17,K,,,,,,
 First70,Last70,Address48,Carlsbad,92011,CA,7/6/2011,2011,No,School53,Pre,"Dairy, peanut, tree nuts,salmon, sesame",,,First62 Last62,Coach14,
-First71,Last71,Address15,Vista,92081,CA,5/9/2010,2010,No,"School1",1,,,,First141 Last141,Coach16,Team Parent
+First71,Last71,Address15,Vista,92081,CA,5/9/2010,2010,No,School1,1,,,,First141 Last141,Coach16,Team Parent
 First72,Last72,Address90,Carlsbad,92010,CA,6/29/2010,2010,No,School75,1,,,,,Coach5,Coach
 First73,Last73,Address29,Carlsbad,Calif,CA,6/10/2010,2010,No,School74,k,,,,First142 Last142,Coach10,
 First74,Last74,Address103,Carlsbad,92010,CA,11/10/2010,2010,No,School76,k,,,,First143 Last143,,
