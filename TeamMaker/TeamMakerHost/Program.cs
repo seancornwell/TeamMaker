@@ -17,9 +17,11 @@ namespace TeamMakerHost
 
             var parser = new CsvParser();
 
-            var players = parser.Parse(filepath);
+            var service = new TeamMakerService(parser);
 
-            Console.WriteLine(players.Count);
+            var message = service.Process(filepath);
+
+            Console.WriteLine(message);
 
             Console.ReadLine();
 

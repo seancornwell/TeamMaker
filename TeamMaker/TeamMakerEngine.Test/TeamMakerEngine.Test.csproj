@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="CsvParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TeamMakerServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TeamMakerEngine\TeamMakerEngine.csproj">
