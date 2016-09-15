@@ -19,7 +19,7 @@ namespace TeamMakerEngine
                 parser.HasFieldsEnclosedInQuotes = true;
 
                 // skip over header line.
-                parser.ReadLine();
+                parser.ReadFields();
 
                 int firstNameIndex = 0;
                 int lastNameIndex = 1;

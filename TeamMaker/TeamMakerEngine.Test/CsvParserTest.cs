@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-//TODO: Sean - Use this path for the data file: ".\SampleFiles\SamplePlayers_Pre-1.csv"
+
 namespace TeamMakerEngine.Test
 {
 	[TestClass]
@@ -10,11 +10,11 @@ namespace TeamMakerEngine.Test
 		[TestMethod]
 		public void ParseTest()
 		{
-			var a = new CsvParser();
-			var col = a.Parse(@"C:\Users\Sean\Downloads\FileNameFromFer.csv");
+			var parser = new CsvParser();
+			var players = parser.Parse(@".\SampleFiles\SamplePlayers_Pre-1.csv");
 
-			CollectionAssert.AllItemsAreNotNull(col);
-			Assert.IsTrue(col.Any(), "No items found");
+			CollectionAssert.AllItemsAreNotNull(players);
+			Assert.IsTrue(players.Any(), "No items found");
 		}
 	}
 }
