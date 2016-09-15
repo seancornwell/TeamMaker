@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TeamMakerEngine
 {
-    interface IParser
+    public interface IParser
     {
         List<Player> Parse(string filepath);
     }

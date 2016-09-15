@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TeamMakerEngine
 {
-    class Player
+    public class Player
     {
         public Player( string firstName, string lastName, string address, string city, string zip, string state, string dob, string ageGroup, string allStar, string schoolName, string grade, string medical, string specialRequests, string buddyRequest1, string buddyRequest2, string headCoachRequest, string volunteersNeeded)
         {

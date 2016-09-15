@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace TeamMakerEngine
 {
-    class CsvParser : IParser
+    public class CsvParser : IParser
     {
         public List<Player> Parse(string filepath)
         {
             List<Player> players = new List<Player>();
 
-            using (TextFieldParser parser = new TextFieldParser(""))
+            using (TextFieldParser parser = new TextFieldParser(filepath.Replace("\"",string.Empty)))
             {
                 parser.SetDelimiters(new string[] { "," });
                 parser.HasFieldsEnclosedInQuotes = true;

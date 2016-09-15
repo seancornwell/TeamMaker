@@ -10,11 +10,11 @@ namespace TeamMakerEngine.Test
 		[TestMethod]
 		public void ParseTest()
 		{
-			//var a = new CsvParser();
-			//var col = a.Parse("FileNameFromFer");
+			var a = new CsvParser();
+			var col = a.Parse(@"C:\Users\Sean\Downloads\FileNameFromFer.csv");
 
-			//CollectionAssert.AllItemsAreNotNull(col);
-			//Assert.IsTrue(col.Any(), "No items found");
+			CollectionAssert.AllItemsAreNotNull(col);
+			Assert.IsTrue(col.Any(), "No items found");
 		}
 	}
 }
