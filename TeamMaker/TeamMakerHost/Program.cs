@@ -18,7 +18,17 @@ namespace TeamMakerHost
 
 			var parser = new CsvParser();
 
-			var service = new TeamMakerService( parser, new List<IGrouper> { new BuddyGrouper(), new CoachGrouper(), new SchoolGrouper() } );
+            int teamSize;
+
+            do
+            {
+                Console.WriteLine("How many players would you like on each team?");
+
+                var teamSizeStr = Console.ReadLine();
+                int.TryParse(teamSizeStr, out teamSize);
+            } while (teamSize != 0);
+
+            var service = new TeamMakerService(parser,teamSize, new List<IGrouper> { new BuddyGrouper(), new CoachGrouper(), new SchoolGrouper() } );
 
 			ReadOnlyCollection<Team> teams = service.Process( filepath );
 

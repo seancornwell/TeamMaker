@@ -11,11 +11,13 @@ namespace TeamMakerEngine
 	{
 
 		private IParser _parser;
+		private int _teamSize;
 		private readonly IEnumerable<IGrouper> _groupers;
 
-		public TeamMakerService( IParser parser, IEnumerable<IGrouper> groupers )
+		public TeamMakerService( IParser parser, int teamSize, IEnumerable<IGrouper> groupers )
 		{
 			_parser = parser;
+			_teamSize = teamSize;
 			_groupers = groupers;
 		}
 
@@ -29,9 +31,7 @@ namespace TeamMakerEngine
 				playerGroups = grouper.Group( playerGroups );
 			}
 
-			var teams = playerGroups.Select((pg, i)=> new Team(i, pg)).ToList();
 
-			return new ReadOnlyCollection<Team>(teams);
 		}
 
 
