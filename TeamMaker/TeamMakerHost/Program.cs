@@ -17,7 +17,17 @@ namespace TeamMakerHost
 
             var parser = new CsvParser();
 
-            var service = new TeamMakerService(parser);
+            int teamSize;
+
+            do
+            {
+                Console.WriteLine("How many players would you like on each team?");
+
+                var teamSizeStr = Console.ReadLine();
+                int.TryParse(teamSizeStr, out teamSize);
+            } while (teamSize != 0);
+
+            var service = new TeamMakerService(parser,teamSize);
 
             var message = service.Process(filepath);
 

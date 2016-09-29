@@ -10,10 +10,12 @@ namespace TeamMakerEngine
     {
 
         private IParser _parser;
+        private int _teamSize;
 
-        public TeamMakerService(IParser parser)
+        public TeamMakerService(IParser parser,int teamSize)
         {
             _parser = parser;
+            _teamSize = teamSize;
         }
 
         public string Process(string inputFilePath)
@@ -23,7 +25,7 @@ namespace TeamMakerEngine
             return players.Count.ToString();
         }
 
-   
+       
     }
 
 
