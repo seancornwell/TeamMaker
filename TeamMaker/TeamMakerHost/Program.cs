@@ -12,23 +12,23 @@ namespace TeamMakerHost
 	{
 		static void Main( string[] args )
 		{
-            Console.WriteLine("What is the file path, including the file name, for your team .csv file?");
+			Console.WriteLine( "What is the file path, including the file name, for your team .csv file?" );
 
-            var filepath = Console.ReadLine();
+			var filepath = Console.ReadLine();
 
-            var parser = new CsvParser();
+			var parser = new CsvParser();
 
-            var service = new TeamMakerService(parser, null);
+			var service = new TeamMakerService( parser, new List<IGrouper> { new BuddyGrouper(), new CoachGrouper(), new SchoolGrouper() } );
 
-            ReadOnlyCollection<Team> teams = service.Process(filepath);
+			ReadOnlyCollection<Team> teams = service.Process( filepath );
 
-            Console.WriteLine(teams.Count);
+			Console.WriteLine( teams.Count );
 
-            Console.ReadLine();
+			Console.ReadLine();
 
 
 
-            //ask for file path, receive file, run parser, produce while loop showing first names, end with realine that will close program when pressed
+			//ask for file path, receive file, run parser, produce while loop showing first names, end with realine that will close program when pressed
 		}
 	}
 }
