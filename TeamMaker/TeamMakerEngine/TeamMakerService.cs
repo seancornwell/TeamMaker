@@ -20,14 +20,15 @@ namespace TeamMakerEngine
 
 		public ReadOnlyCollection<Team> Process( string inputFilePath )
 		{
-			var players = _parser.Parse( inputFilePath );
-			var playerGroups = players.Select( p => new PlayerGroup( p ) ).ToList();
+			List<Player> players = _parser.Parse( inputFilePath );
+			List<PlayerGroup> playerGroups = players.Select( p => new PlayerGroup( p ) ).ToList();
 
 			foreach ( IGrouper grouper in _groupers )
 			{
 				playerGroups = grouper.Group( playerGroups );
 			}
-			var teams = playerGroups.Select( ( pg, i ) => new Team( i, pg ) ).ToList();
+
+			List<Team> teams = playerGroups.Select( ( pg, i ) => new Team( i + 1, pg ) ).ToList();
 
 			return new ReadOnlyCollection<Team>( teams );
 		}
