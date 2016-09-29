@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,11 +18,11 @@ namespace TeamMakerHost
 
             var parser = new CsvParser();
 
-            var service = new TeamMakerService(parser);
+            var service = new TeamMakerService(parser, null);
 
-            var message = service.Process(filepath);
+            ReadOnlyCollection<Team> teams = service.Process(filepath);
 
-            Console.WriteLine(message);
+            Console.WriteLine(teams.Count);
 
             Console.ReadLine();
 

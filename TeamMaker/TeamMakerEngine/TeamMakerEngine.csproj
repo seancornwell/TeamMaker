@@ -42,9 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CsvParser.cs" />
+    <Compile Include="IGrouper.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="IParser.cs" />
+    <Compile Include="PlayerGroup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Team.cs" />
     <Compile Include="TeamMakerService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
