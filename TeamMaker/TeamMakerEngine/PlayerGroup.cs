@@ -11,7 +11,12 @@ namespace TeamMakerEngine
 		}
 
 		public List<Player> Players { get; } = new List<Player>();
-		public string AvgBuddy { get; set; }
+        public string AvgBuddy => 
+            Players?.Where(p => !string.IsNullOrWhiteSpace(p.BuddyRequest1))
+            .GroupBy(p => p.BuddyRequest1)
+            .OrderByDescending(pg => pg.Count())
+            .FirstOrDefault()
+            ?.Key;
 		public string AvgCoach { get; set; }
 		public string AvgSchool { get; set; }
 		public int AvgAge  => Players?.Sum(p=> p.Age) ?? 0;
