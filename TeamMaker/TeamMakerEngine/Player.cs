@@ -29,6 +29,7 @@ namespace TeamMakerEngine
 			VolunteersNeeded = volunteersNeeded;
 		}
 
+        public string FullName => FirstName + " " + LastName;
 		public string FirstName { get; }
 		public string LastName { get; }
 		public string Address { get; }
