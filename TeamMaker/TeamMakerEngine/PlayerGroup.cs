@@ -16,7 +16,12 @@ namespace TeamMakerEngine
             Players.AddRange(relatedPlayerGroups.SelectMany(pg => pg.Players));
         }
 
-		public List<Player> Players { get; } = new List<Player>();
+        public PlayerGroup(IEnumerable<PlayerGroup> relatedPlayerGroups)
+        {
+            Players.AddRange(relatedPlayerGroups.SelectMany(pg => pg.Players));
+        }
+
+        public List<Player> Players { get; } = new List<Player>();
         public string AvgBuddy => 
             Players?.Where(p => !string.IsNullOrWhiteSpace(p.BuddyRequest1))
             .GroupBy(p => p.BuddyRequest1)

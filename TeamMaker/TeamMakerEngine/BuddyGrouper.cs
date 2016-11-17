@@ -15,9 +15,25 @@ namespace TeamMakerEngine
 
             newPlayerGroups.AddRange(noRequests);
 
-            foreach (var grouping in groupRequests.Where(g => g.Key != null))
+            List <PlayerGroup> withRequests = groupRequests.Where(g => g.Key != null).Select(g => new PlayerGroup(g)).ToList();
+            while (withRequests.Any())
             {
-                var requestedBuddy = grouping.Key;
+                var grouping = withRequests.First();
+                withRequests.Remove(grouping);
+
+                var requestedBuddy = grouping.AvgBuddy;
+
+                bool alreadyContainsBuddy = grouping.Players.Any(p => p.FullName == requestedBuddy);
+
+                if (alreadyContainsBuddy)
+                {
+                    continue;
+                }
+
+                var foundGroup1 = withRequests.FirstOrDefault(pg => pg.Players.Any(p => p.FullName == requestedBuddy));
+
+                //
+
                 var foundGroup = newPlayerGroups.FirstOrDefault(pg => pg.Players.Any(p => p.FullName == requestedBuddy));
 
                 if (foundGroup == null)
